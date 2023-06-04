@@ -25,11 +25,17 @@ Mobile.verifyElementText(findTestObject('Object Repository/FailedLogin/android.w
 
 Mobile.tap(findTestObject('Object Repository/FailedLogin/android.widget.EditText'), 0)
 
-Mobile.setText(findTestObject(''), 'wrongemailformat', 0)
+Mobile.setText(findTestObject('Login/emailActive'), 'wrongemailformat', 0)
 
-Mobile.tap(findTestObject('Object Repository/FailedLogin/android.widget.EditText -'), 0)
+Mobile.hideKeyboard()
 
-Mobile.setText(findTestObject('Object Repository/FailedLogin/android.widget.EditText - (1)'), 'validpassword', 0)
+Mobile.tap(findTestObject('Login/TextInputLayout - Password'), 0)
+
+Mobile.setText(findTestObject('Login/passActive'), 'validpassword', 0)
+
+Mobile.hideKeyboard()
+
+Mobile.tap(findTestObject('Login/android.widget.Button - LOGIN'), 0)
 
 Mobile.verifyElementVisible(findTestObject('Object Repository/FailedLogin/android.widget.TextView - Enter Valid Email'), 
     0)

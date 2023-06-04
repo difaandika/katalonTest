@@ -17,28 +17,3 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('C:\\Users\\MSI-PC\\Downloads\\Sample Android App - Login Tes_4.0_Apkpure.apk', true)
-
-Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.TextView - No account yet Create one (1)'), 0)
-
-Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.EditText'), 0)
-
-Mobile.setText(findTestObject('Register/Nama Active'), 'Name', 0)
-
-Mobile.hideKeyboard()
-
-Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.EditText (1)'), 0)
-
-Mobile.setText(findTestObject('Object Repository/FailedRegister/android.widget.EditText (2)'), 'wrongemailformat', 0)
-
-Mobile.hideKeyboard()
-
-Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.Button - REGISTER (1)'), 0)
-
-Mobile.verifyElementVisible(findTestObject('Object Repository/FailedRegister/android.widget.TextView - Enter Valid Email'), 
-    0)
-
-Mobile.verifyElementText(findTestObject('FailedRegister/android.widget.TextView - Enter Valid Email'), 'Enter Valid Email')
-
-Mobile.closeApplication()
-

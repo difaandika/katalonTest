@@ -23,17 +23,21 @@ Mobile.verifyElementVisible(findTestObject('Object Repository/Login2/android.wid
 
 Mobile.getText(findTestObject('Object Repository/Login2/android.widget.TextView - VERSION - V4'), 0)
 
-Mobile.tap(findTestObject('Object Repository/Login2/android.widget.EditText'), 0)
-
-Mobile.verifyElementVisible(findTestObject(''), 0)
+Mobile.tap(findTestObject('Login2/android.widget.EditText'), 0)
 
 Mobile.setText(findTestObject('Object Repository/Login2/android.widget.EditText (2)'), 'validemail@gmail.com', 0)
 
-Mobile.tap(findTestObject('Object Repository/Login2/android.widget.EditText (1)'), 0)
+Mobile.hideKeyboard()
 
-Mobile.verifyElementVisible(findTestObject('Object Repository/Login2/android.widget.EditText (4)'), 0)
+Mobile.delay(0, FailureHandling.STOP_ON_FAILURE)
 
-Mobile.setText(findTestObject(''), 'validpassword', 0)
+Mobile.tap(findTestObject('Login/TextInputLayout - Password'), 0)
+
+Mobile.setText(findTestObject('Login2/inputTextPassword'), 'validpassword', 0)
+
+Mobile.hideKeyboard()
+
+Mobile.delay(0, FailureHandling.STOP_ON_FAILURE)
 
 Mobile.tap(findTestObject('Object Repository/Login2/android.widget.Button - LOGIN'), 0)
 

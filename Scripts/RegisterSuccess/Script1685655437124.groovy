@@ -25,23 +25,31 @@ Mobile.verifyElementText(findTestObject('Object Repository/Register/android.widg
 
 Mobile.tap(findTestObject('Object Repository/Register/android.widget.TextView - No account yet Create one'), 0)
 
-Mobile.verifyElementVisible(findTestObject(''), 0)
+Mobile.verifyElementVisible(findTestObject('Register/android.widget.ImageView'), 0)
 
 Mobile.tap(findTestObject('Object Repository/Register/android.widget.EditText'), 0)
 
-Mobile.setText(findTestObject(''), 'name', 0)
+Mobile.setText(findTestObject('Register/Nama Active'), 'name', 0)
+
+Mobile.hideKeyboard()
 
 Mobile.tap(findTestObject('Object Repository/Register/android.widget.EditText (1)'), 0)
 
 Mobile.setText(findTestObject('Object Repository/Register/android.widget.EditText (2)'), 'validemail@gmail.com', 0)
 
+Mobile.hideKeyboard()
+
 Mobile.tap(findTestObject('Object Repository/Register/android.widget.EditText (3)'), 0)
 
 Mobile.setText(findTestObject('Object Repository/Register/android.widget.EditText (4)'), 'validpassword', 0)
 
-Mobile.tap(findTestObject('Object Repository/Register/android.widget.EditText (5)'), 0)
+Mobile.hideKeyboard()
 
-Mobile.setText(findTestObject(''), 'validpassword', 0)
+Mobile.tap(findTestObject('Register/confirm pass tidak aktif'), 0)
+
+Mobile.setText(findTestObject('Register/confirm pass aktif'), 'validpassword', 0)
+
+Mobile.hideKeyboard()
 
 Mobile.tap(findTestObject('Object Repository/Register/android.widget.Button - REGISTER'), 0)
 

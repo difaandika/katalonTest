@@ -26,7 +26,7 @@ Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.Butto
 Mobile.verifyElementVisible(findTestObject('Object Repository/FailedRegister/android.widget.TextView - Enter Full Name'), 
     0)
 
-Mobile.verifyElementText(findTestObject(''), 'Enter Full Name')
+Mobile.verifyElementText(findTestObject('FailedRegister/android.widget.TextView - Enter Full Name'), 'Enter Full Name')
 
 Mobile.closeApplication()
 

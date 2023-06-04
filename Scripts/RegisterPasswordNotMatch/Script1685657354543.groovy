@@ -17,31 +17,41 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
 Mobile.startApplication('C:\\Users\\MSI-PC\\Downloads\\Sample Android App - Login Tes_4.0_Apkpure.apk', true)
 
-Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.EditText - Name'), 0)
+Mobile.tap(findTestObject('Login/android.widget.TextView - No account yet Create one'), 0)
 
-Mobile.setText(findTestObject('Object Repository/FailedRegister/android.widget.EditText - Name (1)'), 'name', 0)
+Mobile.tap(findTestObject('Register/android.widget.EditText'), 0)
 
-Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.EditText - wrongemailformat'), 0)
+Mobile.setText(findTestObject('Register/Nama Active'), 'name', 0)
 
-Mobile.setText(findTestObject('Object Repository/FailedRegister/android.widget.EditText - wrongemailformat (1)'), 'validemail@gmail.com', 
-    0)
+Mobile.hideKeyboard()
 
-Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.EditText (3)'), 0)
+Mobile.tap(findTestObject('FailedRegister/android.widget.EditText (1)'), 0)
 
-Mobile.setText(findTestObject('Object Repository/FailedRegister/android.widget.EditText (4)'), 'password1', 0)
+Mobile.setText(findTestObject('Register/email aktif'), 'validemail@gmail.com', 0)
 
-Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.EditText (5)'), 0)
+Mobile.hideKeyboard()
 
-Mobile.setText(findTestObject('Object Repository/FailedRegister/android.widget.EditText (6)'), 'password2', 0)
+Mobile.tap(findTestObject('Register/pass tidak aktif'), 0)
+
+Mobile.setText(findTestObject('Register/pass aktif'), 'password1', 0)
+
+Mobile.hideKeyboard()
+
+Mobile.tap(findTestObject('Register/confirm pass tidak aktif'), 0)
+
+Mobile.setText(findTestObject('Register/confirm pass aktif'), 'password2', 0)
+
+Mobile.hideKeyboard()
 
 Mobile.tap(findTestObject('Object Repository/FailedRegister/android.widget.Button - REGISTER (2)'), 0)
 
 Mobile.verifyElementVisible(findTestObject('Object Repository/FailedRegister/android.widget.TextView - Password Does Not Matches'), 
     0)
 
-Mobile.verifyElementText(findTestObject(''), 'Password Does Not Matches')
+Mobile.verifyElementText(findTestObject('FailedRegister/android.widget.TextView - Password Does Not Matches'), 'Password Does Not Matches')
 
 Mobile.closeApplication()
 

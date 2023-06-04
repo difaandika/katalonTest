@@ -24,23 +24,22 @@ Mobile.verifyElementVisible(findTestObject('Object Repository/FailedLogin/androi
 Mobile.verifyElementVisible(findTestObject('Object Repository/FailedLogin/android.widget.TextView - VERSION - V4 (3)'), 
     0)
 
-Mobile.verifyElementText(findTestObject(''), 'VERSION - V4')
+Mobile.verifyElementText(findTestObject('FailedLogin/android.widget.TextView - VERSION - V4'), 'VERSION - V4')
 
-Mobile.tap(findTestObject('Object Repository/FailedLogin/android.widget.EditText - agmail.com (2)'), 0)
+Mobile.tap(findTestObject('Login/TextInputLayout - Email'), 0)
 
-Mobile.setText(findTestObject('Object Repository/FailedLogin/android.widget.EditText - agmail.com (3)'), 'validemail@gmail.com', 
-    0)
+Mobile.setText(findTestObject('Login/emailActive'), 'validemail@gmail.com', 0)
 
-Mobile.tap(findTestObject('Object Repository/FailedLogin/android.widget.EditText - (2)'), 0)
+Mobile.hideKeyboard()
 
-Mobile.setText(findTestObject(''), 'wrongpassword', 0)
+Mobile.setText(findTestObject('Login/passActive'), 'wrongpassword', 0)
 
 Mobile.tap(findTestObject('Object Repository/FailedLogin/android.widget.Button - LOGIN (2)'), 0)
 
 Mobile.verifyElementVisible(findTestObject('Object Repository/FailedLogin/android.widget.TextView - Wrong Email or Password'), 
     0)
 
-Mobile.verifyElementText(findTestObject(''), 'Wrong Email or Password')
+Mobile.verifyElementText(findTestObject('FailedLogin/android.widget.TextView - Wrong Email or Password'), 'Wrong Email or Password')
 
 Mobile.closeApplication()
 

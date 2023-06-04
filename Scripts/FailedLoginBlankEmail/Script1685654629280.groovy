@@ -19,23 +19,25 @@ import org.openqa.selenium.Keys as Keys
 
 Mobile.startApplication('C:\\Users\\MSI-PC\\Downloads\\Sample Android App - Login Tes_4.0_Apkpure.apk', true)
 
-Mobile.verifyElementVisible(findTestObject(''), 0)
+Mobile.verifyElementVisible(findTestObject('Login2/android.widget.ImageView'), 0)
 
 Mobile.verifyElementVisible(findTestObject('Object Repository/FailedLogin/android.widget.TextView - VERSION - V4 (2)'), 
     0)
 
-Mobile.verifyElementText(findTestObject(''), 'VERSION - V4')
+Mobile.verifyElementText(findTestObject('Login2/android.widget.TextView - VERSION - V4'), 'VERSION - V4')
 
 Mobile.tap(findTestObject('Object Repository/FailedLogin/android.widget.EditText (1)'), 0)
 
 Mobile.setText(findTestObject('Object Repository/FailedLogin/android.widget.EditText (2)'), 'validpassword', 0)
+
+Mobile.hideKeyboard()
 
 Mobile.tap(findTestObject('Object Repository/FailedLogin/android.widget.Button - LOGIN (1)'), 0)
 
 Mobile.verifyElementVisible(findTestObject('Object Repository/FailedLogin/android.widget.TextView - Enter Valid Email (3)'), 
     0)
 
-Mobile.verifyElementText(findTestObject(''), 'Enter Valid Email')
+Mobile.verifyElementText(findTestObject('Login/android.widget.TextView - Enter Valid Email'), 'Enter Valid Email')
 
 Mobile.closeApplication()
 
